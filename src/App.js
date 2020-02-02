@@ -1,24 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+// Bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="fen-cover">
+      <div className="fen-hero">
+        <h2><span className="">Machmud</span> <span>Effendi</span></h2>
+      </div>
+      <div className="fen-foo">
+        <p>&copy; 2020 <a href="https://machmudeffendi.github.io">Machmudfends</a> Made With My Fingger in Yogyakarta</p>
+      </div>
     </div>
   );
 }
