@@ -1,0 +1,28 @@
+html, body{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  /* background-color: #1c2022; */
+  font-family: 'Poppins', sans-serif;
+}
+.cover{
+  display: flex;
+  width: 100%;
+  background-color: #1c2022;
+  height: 100vh;
+}
+
+.myname{
+  text-align: center;
+  color: #dadada;
+  padding: 0;
+  margin: 0;
+  font-size: 40px;
+  line-height: 0;
+  vertical-align: middle;
+  margin: auto;
+}
+.myname h2{
+  pointer-events: none;
+  cursor: none;
+}
