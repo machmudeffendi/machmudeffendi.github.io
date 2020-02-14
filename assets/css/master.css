@@ -27,9 +27,55 @@ html, body{
   cursor: none;
 }
 
+.myname h2 span{
+-webkit-touch-callout: none; /* iOS Safari */
+-webkit-user-select: none; /* Safari */
+-khtml-user-select: none; /* Konqueror HTML */
+-moz-user-select: none; /* Old versions of Firefox */
+-ms-user-select: none; /* Internet Explorer/Edge */
+user-select: none; /* Non-prefixed version, currently
+                      supported by Chrome, Opera and Firefox */
+}
+
 .myname h2 > span:hover{
   /* pointer-events: none; */
   font-size: 100px;
   color: #00b894;
   vertical-align: middle;
+}
+
+.myname h2 > span._1:hover{
+  color: #55efc4;
+}
+
+.myname h2 > span._2:hover{
+  color: #00cec9;
+}
+
+.myname h2 > span._3:hover{
+  color: #0984e3;
+}
+
+.myname h2 > span._4:hover{
+  color: #6c5ce7;
+}
+
+.myname h2 > span._5:hover{
+  color: #d63031;
+}
+
+.myname h2 > span._6:hover{
+  color: #e84393;
+}
+
+.myname h2 > span._7:hover{
+  color: #fdcb6e;
+}
+
+.myname h2 > span._8:hover{
+  color: #fd79a8;
+}
+
+.myname h2 > span._9:hover{
+  color: #ffeaa7;
 }
