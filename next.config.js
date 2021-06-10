@@ -4,7 +4,7 @@ module.exports = {
   assetPrefix: isProd ? '/awesome' : '',
   rewrites() {
     return [
-      { source: isProd ? '/awesome/_next/:path*' : '_next/:path*', destination: '/_next/:path*' }
+      { source: isProd ? '/awesome/:path*' : '_next/:path*', destination: isProd ? '/awesome/_next/:path*' : '/_next/:path*' }
     ]
   }
 }
