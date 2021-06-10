@@ -4,8 +4,8 @@ export default function Contact(){
   return (
     <Wrapper>
       <div className="header">
-        <span className="sub-title">Get In Touch</span>
-        <h2 className="title">Contact</h2>
+        <span className="sub-title">404</span>
+        <h2 className="title">This page could not be found.</h2>
       </div>
     </Wrapper>
   )
