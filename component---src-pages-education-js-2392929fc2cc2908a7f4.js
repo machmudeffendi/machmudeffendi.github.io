@@ -1,0 +1,2 @@
+(self.webpackChunkmachmud_site=self.webpackChunkmachmud_site||[]).push([[459],{5659:function(e,t,a){"use strict";a.r(t),a.d(t,{default:function(){return s}});var c=a(7294);function s(){return c.createElement("div",{className:"w-100"},c.createElement("div",{className:"header"},c.createElement("span",{className:"sub-title"},"Education"),c.createElement("h2",{className:"title"},"Education")),c.createElement("div",{className:"body"}))}}}]);
+//# sourceMappingURL=component---src-pages-education-js-2392929fc2cc2908a7f4.js.map

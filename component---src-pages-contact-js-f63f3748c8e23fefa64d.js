@@ -1,0 +1,2 @@
+(self.webpackChunkmachmud_site=self.webpackChunkmachmud_site||[]).push([[501],{262:function(e,t,a){"use strict";a.r(t),a.d(t,{default:function(){return n}});var c=a(7294);function n(){return c.createElement("div",{className:"header"},c.createElement("span",{className:"sub-title"},"Get In Touch"),c.createElement("h2",{className:"title"},"Contact"))}}}]);
+//# sourceMappingURL=component---src-pages-contact-js-f63f3748c8e23fefa64d.js.map
