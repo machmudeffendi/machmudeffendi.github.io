@@ -1,23 +1,29 @@
 {
   "name": "machmud-site",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
-  "author": {
-    "name": "machmudfends",
-    "url": "https://machmudfends.com"
-  },
+  "description": "machmud-site",
+  "author": "machmudfends",
+  "keywords": [
+    "gatsby"
+  ],
   "scripts": {
-    "dev": "next dev -p 3000",
-    "build": "next build",
-    "start": "next start",
-    "export": "next export",
-    "gh-deploy": "next build && next export && git add out/ && git commit -m \"Deploy gh-pages\" && git subtree push --prefix out origin gh-pages"
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
   },
   "dependencies": {
     "bootstrap": "^5.0.1",
-    "next": "10.2.3",
-    "react": "17.0.2",
-    "react-bootstrap": "^1.6.0",
-    "react-dom": "17.0.2"
+    "gatsby": "^3.6.2",
+    "gatsby-plugin-react-helmet": "^4.7.0",
+    "react": "^17.0.1",
+    "react-bootstrap": "^1.6.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.0"
   }
 }
