@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import {
   Container,
   Button
@@ -16,7 +17,7 @@ export default function IndexPage() {
         <span className="desc-home d-block">Experience building web and mobile applications, by implementing tests, <br className="d-none d-lg-block"/>including performance, functionality, integration, systems, and user acceptance.</span>
         <div className="mt-2">
           <Button className="smooth-primary btn-sm">Download CV</Button>&nbsp;
-          <Button className="smooth-primary btn-sm">View Portofolio</Button>
+          <Link to="/work" className="btn smooth-primary btn-sm">View Portofolio</Link>
         </div>
       </Container>
     </div>

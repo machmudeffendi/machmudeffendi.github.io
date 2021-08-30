@@ -1,36 +1,28 @@
 import React from 'react'
 import {
-  Accordion,
-  Button,
+  Row,
+  Col,
   Card,
 } from 'react-bootstrap'
 
 export default function Education(){
   return (
-    <div className="w-100">
+    <div className="w-100 content-style-1">
       <div className="header">
         <span className="sub-title">Education</span>
         <h2 className="title">Education</h2>
       </div>
       <div className="body">
-      {/* <Accordion defaultActiveKey="0">
-        <Card>
-          <Accordion.Toggle as={Card.Header} eventKey="0">
-            State Vocational High School 6 of Malang
-          </Accordion.Toggle>
-          <Accordion.Collapse eventKey="0">
-            <Card.Body>Hello! I'm the body</Card.Body>
-          </Accordion.Collapse>
-        </Card>
-        <Card>
-          <Accordion.Toggle as={Card.Header} eventKey="1">
-            Click me!
-          </Accordion.Toggle>
-          <Accordion.Collapse eventKey="1">
-            <Card.Body>Hello! I'm another body</Card.Body>
-          </Accordion.Collapse>
-        </Card>
-      </Accordion> */}
+        <Row className="g-4">
+          <Col sm={12} md={6} lg={4}>
+            <Card>
+              <Card.Body>
+                <h4 className="mb-3">State Vocational High School 6 Malang</h4>
+                <p className="pb-0 mb-0">Software engineering</p>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
       </div>
     </div>
   )

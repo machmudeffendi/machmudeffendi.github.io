@@ -153,42 +153,25 @@ main > div{
 .content .body{
   margin-top: 25px;
 }
-.content .services .body{
-  margin-top: 70px;
+.content .content-style-1 .body{
+  margin-top: 50px;
 }
-.services .body .card{
+.content-style-1 .body .card{
   border: 1px solid rgba(0,0,0,.15);
   height: 100%;
-  border-top-left-radius: 0;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 0px;
 }
-.services .body .card .card-body{
-  padding-top: 40px;
-  text-align: center;
+.content-style-1 .body .card .card-body{
+  text-align: left;
 }
-.services .body .card .icon{
-  position: absolute;
-  margin-top: -25px;
+.content-style-1 .body .card .icon{
   background-color: #ffffff;
-  border: 1px solid rgba(0,0,0,.15);
-  /* border-radius: 50%; */
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 20px;
-  border-top-right-radius: 0px;
-  border-top-left-radius: 20px;
-  padding: 10px 30px;
   justify-content: center;
+  float: right;
 }
-.services .body .card .card-body h4{
-  font-weight: 700;
+.content-style-1 .body .card .card-body h4{
+  font-weight: 500;
 }
-.services .body .card .card-body p{
-  font-size: 14px;
-}
-.services .body .row > div{
-  padding-top: 5px;
-  padding-bottom: 5px;
+.content-style-1 .body .card .card-body p{
+  font-size: 16px;
 }
 /* END CONTENT */
