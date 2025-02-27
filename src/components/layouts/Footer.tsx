@@ -6,7 +6,7 @@ export default function Footer(){
       <span className="border-r border-[#2C334B] px-[20px] content-center h-[45px]">
         find-me :
       </span>
-      <a role="button" className="border-r border-[#2C334B] px-[20px] content-center hover:text-white">
+      <a href="https://x.com/machmudfends" target="blank" role="button" className="border-r border-[#2C334B] px-[20px] content-center hover:text-white">
         <Image
           className="dark:invert"
           src="/twitter.svg"
@@ -16,7 +16,7 @@ export default function Footer(){
           priority
         />
       </a>
-      <a role="button" className="border-r border-[#2C334B] px-[20px] content-center hover:text-white">
+      <a href="https://instagram.com/fenfenx_" target="blank"  role="button" className="border-r border-[#2C334B] px-[20px] content-center hover:text-white">
       <Image
           className="dark:invert"
           src="/instagram.svg"
@@ -26,7 +26,7 @@ export default function Footer(){
           priority
         />
       </a>
-      <a role="button" className="border-r border-[#2C334B] px-[20px] content-center hover:text-white">
+      <a href="https://linkedin.com/in/machmudeffendi" target="blank"  role="button" className="border-r border-[#2C334B] px-[20px] content-center hover:text-white">
       <Image
           className="dark:invert"
           src="/linkedin.svg"
@@ -36,7 +36,7 @@ export default function Footer(){
           priority
         />
       </a>
-      <a role="button" className="flex flex-row ms-auto border-l border-[#2C334B] px-[20px] content-center hover:text-white">
+      <a href="https://github.com/machmudeffendi" target="blank"  role="button" className="flex flex-row ms-auto border-l border-[#2C334B] px-[20px] content-center hover:text-white">
         <span className="content-center me-2">@machmudeffendi</span> 
         <Image
           className="dark:invert"

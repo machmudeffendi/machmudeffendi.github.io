@@ -13,7 +13,7 @@ export default function Home() {
       <div className="flex flex-col leading-tight">
         <span className="text-[#9E9E9E]">// Check my github profile</span>
         <span className="text-[20px]">
-          <span className="text-[#4325ED]">const</span> <span className="text-[#75D96C]">github</span> = <a role="button" className="text-[#FFAB3E]">‘https://github.com/machmudeffendi’</a>
+          <span className="text-[#4325ED]">const</span> <span className="text-[#75D96C]">github</span> = <a href="https://github.com/machmudeffendi" target="_blank"  role="button" className="text-[#FFAB3E]">'https://github.com/machmudeffendi'</a>
         </span>
       </div>
     </div>
