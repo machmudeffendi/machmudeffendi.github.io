@@ -26,9 +26,9 @@ export default function Navbar(){
           </Link>
         ))
       }
-      <a role="button" className="ms-auto border-l border-[#2C334B] px-[20px] content-center hover:border-4 hover:border-[#9290C3] hover:text-white">
+      <Link href={'/contact-me'} role="button" className={pathname == '/contact-me' ? "ms-auto px-[20px] content-center border-4 border-[#9290C3] text-white" : "ms-auto border-l border-[#2C334B] px-[20px] content-center hover:border-4 hover:border-[#9290C3] hover:text-white"}>
         _contact-me
-      </a>
+      </Link>
     </nav>
   )
 }
