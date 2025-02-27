@@ -13,6 +13,14 @@ type BoxExperienceType = {
   item: ExpereinceType
 }
 
+export const Tag = ({list}: any) => {
+  if(typeof list == 'string') {
+    list = list.split(',')
+  }
+
+  return list.map((item: string) => <span key={item} className="p-[8px] border border-white text-white text-[12px]">{item}</span>)
+}
+
 export default function BoxExperience({ item }: BoxExperienceType) {
 
   const ListExpereince = ({list}: any) => {
@@ -25,14 +33,6 @@ export default function BoxExperience({ item }: BoxExperienceType) {
         {list.map((item: string) => <li key={item} className="text-white">{item}</li>)}
       </ul>
     )
-  }
-
-  const Tag = ({list}: any) => {
-    if(typeof list == 'string') {
-      list = list.split(',')
-    }
-
-    return list.map((item: string) => <span key={item} className="p-[8px] border border-white text-white text-[12px]">{item}</span>)
   }
 
   return (

@@ -10,7 +10,7 @@
 }
 
 * {
-  color: #5E6375;
+  color: #9DA4BA;
   font-family: "Inconsolata", serif;
   font-size: 16px;
 }
@@ -26,4 +26,19 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.blog-content > *{
+  color: #9DA4BA;
+}
+
+.blog-content h2{
+  font-weight: 800!important;
+  font-size: 24px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.blog-content p{
+  margin-bottom: 10px;
 }
