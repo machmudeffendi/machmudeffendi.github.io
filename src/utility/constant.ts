@@ -64,3 +64,38 @@ export const EDUCATION = [
     description: "Relevant Coursework: Pemrograman Dasar, Pemrograman Web, Pemrograman Bergerak, Relational Database, Struktur dan Algoritma, Design Visual. Participate in the Student Competency Competition, Web Design. 2018"
   }
 ]
+
+export const BLOGLIST = [
+  {
+    id: '1',
+    slug: 'the-standard-lorem-ipsum-passage-used-since-the-1500s',
+    date: 'Feb 25, 2025',
+    title: 'The standard Lorem Ipsum passage, used since the 1500s',
+    image: 'https://picsum.photos/id/1/720',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  },
+  {
+    id: '2',
+    slug: 'Section-1.10.32-of-de-Finibus-Bonorum-et-Malorum-written-by-Cicero-in-45-BC',
+    date: 'Feb 24, 2025',
+    title: 'Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC',
+    image: 'https://picsum.photos/id/2/720',
+    description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo',
+  },
+  {
+    id: '3',
+    slug: 'Section-1.10.32-of-de-Finibus-Bonorum-et-Malorum-written-by-Cicero-in-45-BC',
+    date: 'Feb 24, 2025',
+    title: 'Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC',
+    image: 'https://picsum.photos/id/3/720',
+    description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo',
+  },
+  {
+    id: '4',
+    slug: 'Section-1.10.32-of-de-Finibus-Bonorum-et-Malorum-written-by-Cicero-in-45-BC',
+    date: 'Feb 24, 2025',
+    title: 'Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC',
+    image: 'https://picsum.photos/id/4/720',
+    description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo',
+  }
+]
