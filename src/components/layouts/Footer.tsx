@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Footer(){
   return (
     <footer className="flex flex-row border border-[#2C334B] h-[45px] align-middle">
-      <span className="border-r border-[#2C334B] px-[20px] content-center">
+      <span className="border-r border-[#2C334B] px-[20px] content-center h-[45px]">
         find-me :
       </span>
       <a role="button" className="border-r border-[#2C334B] px-[20px] content-center hover:text-white">

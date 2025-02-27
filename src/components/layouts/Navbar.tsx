@@ -1,15 +1,8 @@
 "use client"
 
+import { NAV_ITEM } from "@/utility/constant";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
-
-const NAV_ITEM = [
-  {href: "/", label: "_home"},
-  {href: "/about-me", label: "_about-me"},
-  {href: "/blog", label: "_blog"},
-  {href: "/projects", label: "_projects"},
-]
 
 export default function Navbar(){
   const pathname = usePathname();
@@ -22,8 +15,8 @@ export default function Navbar(){
   }
 
   return (
-    <nav className="flex flex-row border border-[#2C334B] h-[55px] align-middle">
-      <span className="border-r border-[#2C334B] px-[20px] content-center">
+    <nav className="flex flex-row border border-[#2C334B] h-[55px] align-middle sticky top-0 z-50 bg-[--background]">
+      <span className="border-r border-[#2C334B] px-[20px] content-center h-[55px]">
         machmud-effendi
       </span>
       {
