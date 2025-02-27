@@ -1,77 +1,34 @@
+import Layout from "@/components/layouts/Layout";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col h-screen">
-      <nav className="flex flex-row border border-[#2C334B] h-[55px] align-middle">
-        <span className="border-r border-[#2C334B] px-[20px] content-center">
-          machmud-effendi
-        </span>
-        <a role="button" className="border-r border-[#2C334B] px-[20px] content-center hover:border-b-4 hover:border-b-[#9290C3] hover:text-white">
-          _home
-        </a>
-        <a role="button" className="border-r border-[#2C334B] px-[20px] content-center hover:border-b-4 hover:border-b-[#9290C3] hover:text-white">
-          _about-me
-        </a>
-        <a role="button" className="border-r border-[#2C334B] px-[20px] content-center hover:border-b-4 hover:border-b-[#9290C3] hover:text-white">
-          _blogs
-        </a>
-        <a role="button" className="border-r border-[#2C334B] px-[20px] content-center hover:border-b-4 hover:border-b-[#9290C3] hover:text-white">
-          _projects
-        </a>
-        <a role="button" className="ms-auto border-l border-[#2C334B] px-[20px] content-center hover:border-4 hover:border-[#9290C3] hover:text-white">
-          _contact-me
-        </a>
-      </nav>
-      <main className="flex-grow border-l border-r border-[#2C334B] p-3">
-        Content
-      </main>
-      <footer className="flex flex-row border border-[#2C334B] h-[45px] align-middle">
-        <span className="border-r border-[#2C334B] px-[20px] content-center">
-          find-me :
-        </span>
-        <a role="button" className="border-r border-[#2C334B] px-[20px] content-center hover:text-white">
+    <Layout>
+      <div className="grid grid-cols-2 h-full">
+        <div className="flex flex-col justify-center gap-[50px]">
+          <div className="flex flex-col leading-none">
+            <span className="text-white text-[20px]">Hi There, I am</span>
+            <span className="text-white text-[64px] font-bold">Machmud Effendi</span>
+            <span className="text-[#1F37C0] text-[32px]">{'>'} Software Engineer</span>
+          </div>
+          <div className="flex flex-col leading-tight">
+            <span className="text-[#9E9E9E]">// Check my github profile</span>
+            <span className="text-[20px]">
+              <span className="text-[#4325ED]">const</span> <span className="text-[#75D96C]">github</span> = <a role="button" className="text-[#FFAB3E]">‘https://github.com/machmudeffendi’</a>
+            </span>
+          </div>
+        </div>
+        <div className="flex justify-center ">
           <Image
             className="dark:invert"
-            src="/twitter.svg"
-            alt="Twitter logo"
-            width={24}
-            height={24}
+            src="/profile.svg"
+            alt="Profile Image"
+            width={400}
+            height={400}
             priority
           />
-        </a>
-        <a role="button" className="border-r border-[#2C334B] px-[20px] content-center hover:text-white">
-        <Image
-            className="dark:invert"
-            src="/instagram.svg"
-            alt="Instagram logo"
-            width={24}
-            height={24}
-            priority
-          />
-        </a>
-        <a role="button" className="border-r border-[#2C334B] px-[20px] content-center hover:text-white">
-        <Image
-            className="dark:invert"
-            src="/linkedin.svg"
-            alt="Linkedin logo"
-            width={24}
-            height={24}
-            priority
-          />
-        </a>
-        <a role="button" className="flex flex-row ms-auto border-l border-[#2C334B] px-[20px] content-center hover:text-white">
-          <span className="content-center me-2">@machmudeffendi</span> 
-          <Image
-            className="dark:invert"
-            src="/github.svg"
-            alt="Github logo"
-            width={24}
-            height={24}
-            priority
-          />
-        </a>
-      </footer>
-    </div>
+        </div>
+      </div>
+    </Layout>
   );
 }
