@@ -100,3 +100,4 @@ export const BLOGLIST : Array<PostType> = [
 
 export const POST_PER_PAGE = 10;
 export const REVALIDATE_TIME = 3600
+export const REVALIDATE_TIME_24HOUR = 86400

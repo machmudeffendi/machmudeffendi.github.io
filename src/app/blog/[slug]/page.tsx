@@ -1,6 +1,5 @@
 import { TagLink } from "@/components/about-me/BoxExperience";
 import Image from "next/image";
-import { BLOGLIST } from "@/utility/constant";
 import BackButton from "@/components/blog/BackButton";
 import { getAllPosts, getPost } from "@/lib/sanity/queriesBlog";
 import { FullPostType } from "../blogType";

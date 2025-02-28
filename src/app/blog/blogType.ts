@@ -22,6 +22,7 @@ export type FullPostType = {
   image: string,
   categories: Array<{slug: { current: string }, title: string}>
   author: { name:string },
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   body: Array<any>
 }
 
