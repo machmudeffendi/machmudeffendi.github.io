@@ -11,9 +11,8 @@ export async function generateStaticParams() {
   // return posts.map((post) => ({
   //   slug: post.slug,
   // }))
-
   return BLOGLIST.map((item) => ({
-    slug: item.slug
+    slug: item.slug.current
   }))
 }
 
@@ -32,7 +31,7 @@ export default async function Categories({
       <div className="grid grid-cols-3 grid-flow-col gap-[20px] leading-none">
         <div className="flex flex-col col-span-2">
           <div className="border-t border-[#2C334B]">
-            {BLOGLIST.map((item) => <BoxItemBlog key={item.id} item={item}/>)}
+            {BLOGLIST.map((item) => <BoxItemBlog key={item.slug.current} item={item}/>)}
           </div>
           <div className="flex flex-row justify-center my-[20px]">
             <button className="border-y border-l border-[#2C334B] aspect-square w-[48px] p-[8px]"><ChevronLeft/></button>

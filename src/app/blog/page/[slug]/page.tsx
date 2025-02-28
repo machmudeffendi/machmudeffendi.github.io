@@ -1,28 +1,29 @@
-import Box from "@/components/about-me/Box";
-import BoxFirst, { BoxItemBlog } from "@/components/blog/BoxFirst";
-import ChevronLeft from "@/utility/icons/ChevronLeft";
-import ChevronRight from "@/utility/icons/ChevronRight";
-import Link from "next/link";
-import { CategoryType, PostType } from "./blogType";
-import { getPaginatedPosts, getTotalPostCount } from "@/lib/sanity/queriesBlog";
-import { POST_PER_PAGE } from "@/utility/constant";
-import { getAllCategories } from "@/lib/sanity/queriesCategories";
+import { getPaginatedPosts, getTotalPostCount } from "@/lib/sanity/queriesBlog"
+import { POST_PER_PAGE } from "@/utility/constant"
+import { CategoryType, PostType } from "../../blogType"
+import Link from "next/link"
+import Box from "@/components/about-me/Box"
+import { BoxItemBlog } from "@/components/blog/BoxFirst"
+import ChevronLeft from "@/utility/icons/ChevronLeft"
+import ChevronRight from "@/utility/icons/ChevronRight"
+import { getAllCategories } from "@/lib/sanity/queriesCategories"
 
-export async function generateStaticParams(){
+export async function generateStaticParams() {
   const totalPosts = await getTotalPostCount()
   const totalPages = Math.ceil(totalPosts / POST_PER_PAGE)
-
-  return Array.from({length: totalPages}, (_, i) => ({
-    page: (i + 1).toString()
-  }))
+  return Array.from({length: totalPages}, (_, i) => {
+    return ({
+      slug: (i + 1).toString()
+    })
+  })
 }
 
-export default async function Blog({
+export default async function Pages({
   params,
 }: {
-  params: Promise<{ page: string }>
+  params: Promise<{ slug: string }>
 }){
-  const page = parseInt((await params).page) || 1
+  const page = parseInt((await params).slug) || 1
   const posts = await getPaginatedPosts(page, POST_PER_PAGE)
   const totalPosts = await getTotalPostCount()
   const totalPages = Math.ceil(totalPosts / POST_PER_PAGE)
@@ -35,9 +36,8 @@ export default async function Blog({
         The Fenx Blog
       </h1>
       <div className="grid grid-cols-3 grid-flow-col gap-[20px] leading-none">
-        <div className="flex flex-col col-span-2">
-          <BoxFirst item={posts[0]}/>
-          {posts.filter((f: PostType, idx: number) => idx != 0).map((item: PostType) => <BoxItemBlog key={item.slug.current} item={item}/>)}
+        <div className="flex flex-col col-span-2 border-t border-[#2C334B]">
+          {posts.map((item: PostType) => <BoxItemBlog key={item.slug.current} item={item}/>)}
           <div className="flex flex-row justify-center my-[20px]">
             {page > 1 && (
               <Link href={`/blog/page/${page - 1}`} role="button" className="border-y border-l border-[#2C334B] aspect-square w-[48px] p-[8px]"><ChevronLeft/></Link>

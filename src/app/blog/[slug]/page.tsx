@@ -11,7 +11,7 @@ export async function generateStaticParams() {
   // }))
 
   return BLOGLIST.map((item) => ({
-    slug: item.slug
+    slug: item.slug.current
   }))
 }
 
