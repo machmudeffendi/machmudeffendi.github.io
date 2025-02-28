@@ -33,11 +33,11 @@ export async function getPost(slug: string){
       slug,
       publishedAt,
       author->{
-        name,
-        image
+        name
       },
       image,
       categories[]->{
+        slug,
         title
       },
       body

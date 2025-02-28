@@ -1,5 +1,6 @@
 import { PostType } from "@/app/blog/blogType";
 import { builderImage } from "@/lib/sanity/sanity";
+import { formatDate } from "@/utility/dateformat";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -21,7 +22,7 @@ export function BoxItemBlog({item}: BoxFirstType){
         />
       </Link>
       <div className="flex flex-col col-span-2">
-        <span>{item.publishedAt}</span>
+        <span>{formatDate(item.publishedAt)}</span>
         <Link href={`/blog/${item.slug.current}`} role="button" className="text-white text-[24px] font-bold mt-[5px] mb-[10px]">{item.title}</Link>
         <p>{item.excerpt}</p>
       </div>
@@ -32,7 +33,7 @@ export function BoxItemBlog({item}: BoxFirstType){
 export default function BoxFirst({item}: BoxFirstType){
   return (
     <div className="flex flex-col border border-[#2C334B] p-[20px]">
-      <span className="text-[20px] mb-[5px]">{item.publishedAt}</span>
+      <span className="text-[20px] mb-[5px]">{formatDate(item.publishedAt)}</span>
       <Link href={`/blog/${item.slug.current}`} className="text-white text-[36px] font-bold">{item.title}</Link>
       <Link href={`/blog/${item.slug.current}`} className="w-full aspect-[16/9] relative border border-[#2C334B] my-[15px]">
         <Image

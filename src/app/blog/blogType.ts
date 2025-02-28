@@ -12,6 +12,19 @@ export type PostType = {
   image: string
 }
 
+export type FullPostType = {
+  title: string, 
+  slug: {
+    current: string
+  },
+  excerpt: string
+  publishedAt: string
+  image: string,
+  categories: Array<{slug: { current: string }, title: string}>
+  author: { name:string },
+  body: Array<any>
+}
+
 export type BlogPropsType = {
   posts: Array<PostType>,
   currentPage: number,

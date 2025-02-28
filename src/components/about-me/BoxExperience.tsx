@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 type ExpereinceType = {
   image: string
@@ -23,6 +24,10 @@ export const Tag = ({list}: ListType) => {
   }
 
   return list.map((item: string) => <span key={item} className="p-[8px] border border-white text-white text-[12px]">{item}</span>)
+}
+
+export const TagLink = ({list, url}: {list: {slug: {current:string}, title: string}[], url: string}) => {
+  return list.map((item: {slug: {current:string}, title: string}) => <Link href={`${url}/${item.slug.current}`} key={item.slug.current} className="p-[8px] border border-white text-white text-[12px]">{item.title}</Link>)
 }
 
 export default function BoxExperience({ item }: BoxExperienceType) {
