@@ -1,7 +1,7 @@
 import { client } from "./sanity";
 
 export async function getAllProject(){
-  return client.fetch(
+  return await client.fetch(
     `*[_type == "project"] {
         slug,
         title,

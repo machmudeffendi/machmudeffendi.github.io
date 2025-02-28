@@ -4,7 +4,7 @@ import BackButton from "@/components/blog/BackButton";
 import { getAllPosts, getPost } from "@/lib/sanity/queriesBlog";
 import { FullPostType } from "../blogType";
 import { builderImage } from "@/lib/sanity/sanity";
-import { PortableText } from "next-sanity";
+import { PortableText } from '@portabletext/react'
 import { formatDate } from "@/utility/dateformat";
 
 export async function generateStaticParams() {
@@ -55,3 +55,5 @@ export default async function Page({
     </div>
   )
 }
+
+export const revalidate = 86400 

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Tag } from "../about-me/BoxExperience";
-import { ProjectType } from "@/app/projects/typeProjects";
+import { ProjectType } from "@/components/type/typeProjects";
 import { builderImage } from "@/lib/sanity/sanity";
 
 type BoxProjectsType = {

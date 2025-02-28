@@ -60,3 +60,5 @@ export default async function Categories({
     </div>
   )
 }
+
+export const revalidate = 86400 

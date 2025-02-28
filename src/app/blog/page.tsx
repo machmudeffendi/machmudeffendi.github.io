@@ -59,3 +59,5 @@ export default async function Blog({
     </div>
   )
 }
+
+export const revalidate = 86400 

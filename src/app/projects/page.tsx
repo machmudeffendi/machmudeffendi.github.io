@@ -1,10 +1,10 @@
+
 import BoxProjects from "@/components/projects/BoxProjects";
 import { getAllProject } from "@/lib/sanity/queriesProject";
-import { ProjectType } from "./typeProjects";
+import { ProjectType } from "../../components/type/typeProjects";
 
 export default async function Project(){
-  const project = await getAllProject()
-
+  const project = await getAllProject();
   return (
     <div className="flex flex-col">
       <h1 className="py-[50px] leading-none text-[40px] font-bold text-white">
@@ -17,3 +17,5 @@ export default async function Project(){
     </div>
   )
 }
+
+export const revalidate = 86400 
