@@ -75,8 +75,8 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: set environment
         run: | # Secrets needed on the server
-          echo "NEXT_PUBLIC_SANITY_PROJECT_ID=${{vars.NEXT_PUBLIC_SANITY_PROJECT_ID}}" >> .env.production 
-          echo "NEXT_PUBLIC_SANITY_DATASET=${{vars.NEXT_PUBLIC_SANITY_DATASET}}" >> .env.production
+          echo "NEXT_PUBLIC_SANITY_PROJECT_ID=${{ vars.NEXT_PUBLIC_SANITY_PROJECT_ID }}" >> .env.production 
+          echo "NEXT_PUBLIC_SANITY_DATASET=${{ vars.NEXT_PUBLIC_SANITY_DATASET }}" >> .env.production
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
