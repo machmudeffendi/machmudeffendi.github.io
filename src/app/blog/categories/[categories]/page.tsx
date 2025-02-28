@@ -1,7 +1,7 @@
 import Box from "@/components/about-me/Box";
 import { BoxItemBlog } from "@/components/blog/BoxFirst";
 import { getAllCategories, getCategory } from "@/lib/sanity/queriesCategories";
-import { POST_PER_PAGE, REVALIDATE_TIME } from "@/utility/constant";
+import { POST_PER_PAGE } from "@/utility/constant";
 import ChevronLeft from "@/utility/icons/ChevronLeft";
 import ChevronRight from "@/utility/icons/ChevronRight";
 import Link from "next/link";
@@ -60,5 +60,3 @@ export default async function Categories({
     </div>
   )
 }
-
-export const revalidate = REVALIDATE_TIME

@@ -5,7 +5,7 @@ import ChevronRight from "@/utility/icons/ChevronRight";
 import Link from "next/link";
 import { CategoryType, PostType } from "./blogType";
 import { getPaginatedPosts, getTotalPostCount } from "@/lib/sanity/queriesBlog";
-import { POST_PER_PAGE, REVALIDATE_TIME } from "@/utility/constant";
+import { POST_PER_PAGE } from "@/utility/constant";
 import { getAllCategories } from "@/lib/sanity/queriesCategories";
 
 export async function generateStaticParams(){
@@ -59,5 +59,3 @@ export default async function Blog({
     </div>
   )
 }
-
-export const revalidate = REVALIDATE_TIME

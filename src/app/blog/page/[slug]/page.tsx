@@ -1,5 +1,5 @@
 import { getPaginatedPosts, getTotalPostCount } from "@/lib/sanity/queriesBlog"
-import { POST_PER_PAGE, REVALIDATE_TIME } from "@/utility/constant"
+import { POST_PER_PAGE } from "@/utility/constant"
 import { CategoryType, PostType } from "../../blogType"
 import Link from "next/link"
 import Box from "@/components/about-me/Box"
@@ -60,5 +60,3 @@ export default async function Pages({
     </div>
   )
 }
-
-export const revalidate = REVALIDATE_TIME

@@ -1,6 +1,5 @@
 import BoxProjects from "@/components/projects/BoxProjects";
 import { getAllProject } from "@/lib/sanity/queriesProject";
-import { REVALIDATE_TIME_24HOUR } from "@/utility/constant";
 import { ProjectType } from "./typeProjects";
 
 export default async function Project(){
@@ -18,5 +17,3 @@ export default async function Project(){
     </div>
   )
 }
-
-export const revalidate = REVALIDATE_TIME_24HOUR
