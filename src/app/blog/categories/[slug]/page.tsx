@@ -5,11 +5,29 @@ import ChevronLeft from "@/utility/icons/ChevronLeft";
 import ChevronRight from "@/utility/icons/ChevronRight";
 import Link from "next/link";
 
-export default function Categories(){
+export async function generateStaticParams() {
+  // const posts = await fetch('https://.../posts').then((res) => res.json())
+ 
+  // return posts.map((post) => ({
+  //   slug: post.slug,
+  // }))
+
+  return BLOGLIST.map((item) => ({
+    slug: item.slug
+  }))
+}
+
+export default async function Categories({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}){
+
+  const slug = (await params).slug
   return (
     <div className="flex flex-col">
       <h1 className="py-[50px] leading-none text-[40px] font-bold text-white">
-        Category Name
+        {slug}
       </h1>
       <div className="grid grid-cols-3 grid-flow-col gap-[20px] leading-none">
         <div className="flex flex-col col-span-2">

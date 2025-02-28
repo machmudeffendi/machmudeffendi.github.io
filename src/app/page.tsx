@@ -1,4 +1,4 @@
-import Layout from "@/components/layouts/Layout";
+
 import Image from "next/image";
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
         <span className="text-[#1F37C0] text-[32px]">{'>'} Software Engineer</span>
       </div>
       <div className="flex flex-col leading-tight">
-        <span className="text-[#9E9E9E]">// Check my github profile</span>
+        <span className="text-[#9E9E9E]">{"// Check my github profile"}</span>
         <span className="text-[20px]">
           <span className="text-[#4325ED]">const</span> <span className="text-[#75D96C]">github</span> = <a href="https://github.com/machmudeffendi" target="_blank"  role="button" className="text-[#FFAB3E]">'https://github.com/machmudeffendi'</a>
         </span>

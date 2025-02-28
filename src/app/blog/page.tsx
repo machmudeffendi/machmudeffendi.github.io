@@ -3,7 +3,6 @@ import BoxFirst, { BoxItemBlog } from "@/components/blog/BoxFirst";
 import { BLOGLIST } from "@/utility/constant";
 import ChevronLeft from "@/utility/icons/ChevronLeft";
 import ChevronRight from "@/utility/icons/ChevronRight";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Blog(){

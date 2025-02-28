@@ -1,7 +1,6 @@
 import Box from "@/components/about-me/Box"
 import BoxExperience from "@/components/about-me/BoxExperience"
 import { EDUCATION, EXPEREINCE } from "@/utility/constant"
-import Image from "next/image"
 
 export default function AboutMe(){
   return (

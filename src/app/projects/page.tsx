@@ -1,6 +1,4 @@
-import { Tag } from "@/components/about-me/BoxExperience";
 import BoxProjects from "@/components/projects/BoxProjects";
-import Image from "next/image";
 
 const PROJECTS = [
   {

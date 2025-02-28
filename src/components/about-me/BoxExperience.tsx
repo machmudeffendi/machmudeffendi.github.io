@@ -13,7 +13,11 @@ type BoxExperienceType = {
   item: ExpereinceType
 }
 
-export const Tag = ({list}: any) => {
+type ListType = {
+  list: string | Array<string>
+}
+
+export const Tag = ({list}: ListType) => {
   if(typeof list == 'string') {
     list = list.split(',')
   }
@@ -23,7 +27,7 @@ export const Tag = ({list}: any) => {
 
 export default function BoxExperience({ item }: BoxExperienceType) {
 
-  const ListExpereince = ({list}: any) => {
+  const ListExpereince = ({list}: ListType) => {
     if(typeof list != 'object') {
       return <></>
     }

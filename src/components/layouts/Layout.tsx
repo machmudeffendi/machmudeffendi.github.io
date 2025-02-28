@@ -1,7 +1,12 @@
+import { ReactNode } from "react";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 
-export default function Layout({children}: any) {
+type LayoutType = {
+  children: ReactNode
+}
+
+export default function Layout({children}: LayoutType) {
   return (
     <div className="flex flex-col h-screen">
       <Navbar/>

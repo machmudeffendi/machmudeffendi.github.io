@@ -1,10 +1,12 @@
+import { ReactNode } from "react"
+
 type BoxType = {
   title: string
-  children: any
+  children: ReactNode
   titleSize?: string
 }
 
-export default function Box({children, title, titleSize}: BoxType){
+export default function Box({children, title, titleSize}:  BoxType){
   const _titleSize = () =>{
     if(titleSize == 'sm') {
       return '20px'

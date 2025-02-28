@@ -1,19 +1,32 @@
-"use client"
-
 import { Tag } from "@/components/about-me/BoxExperience";
 import Image from "next/image";
-import Link from "next/link";
-import { ChevronLeftIcon } from "@heroicons/react/16/solid";
-import { useRouter } from "next/navigation";
+import { BLOGLIST } from "@/utility/constant";
+import BackButton from "@/components/blog/BackButton";
 
-export default function Page(){
-  const router = useRouter();
+export async function generateStaticParams() {
+  // const posts = await fetch('https://.../posts').then((res) => res.json())
+ 
+  // return posts.map((post) => ({
+  //   slug: post.slug,
+  // }))
+
+  return BLOGLIST.map((item) => ({
+    slug: item.slug
+  }))
+}
+
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}){
+  const slug = (await params).slug
 
   return (
     <div className="flex flex-col p-[20px]">
       <div className="grid grid-cols-12 gap-[40px]">
         <div className="col-span-2 mx-auto">
-          <a role="button" onClick={() => router.back()} className="flex flex-row justify-center gap-[10px] py-[5px] px-[10px] border border-[#2C334B] text-[16px] hover:text-white"><ChevronLeftIcon className="size-6 text-blue-500"/> Back</a>
+          <BackButton />
         </div>
         <div className="col-span-6 aspect-[4/3] relative" >
           <Image
@@ -24,7 +37,7 @@ export default function Page(){
           />
         </div>
         <div className="col-span-4 flex flex-col justify-center leading-none">
-          <h1 className="text-white text-[32px] font-bold mb-[10px]">The standard Lorem Ipsum passage, used since the 1500s</h1>
+          <h1 className="text-white text-[32px] font-bold mb-[10px]">{slug}</h1>
           <span className="text-white mb-[5px]">By Machmud Effendi</span>
           <span className="mb-[10px]">Feb 25, 2025</span>
           <div className="flex flex-row gap-[10px] leading-none">
