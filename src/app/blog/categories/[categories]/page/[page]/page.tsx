@@ -15,7 +15,7 @@ type StaticParams = {
 
 export async function generateStaticParams() {
   const totalCategories = await getTotalCategoryCount()
-  let params: StaticParams[] = [];
+  const params: StaticParams[] = [];
   totalCategories.map((item: CategoryTotalPostType) => {
     const totalPages = Math.ceil(item.totalPosts / POST_PER_PAGE)
     Array.from({length: totalPages}, (_, i) => {
