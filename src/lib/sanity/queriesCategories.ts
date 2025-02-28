@@ -20,3 +20,13 @@ export async function getCategory(slug: string){
     {slug}
   )
 }
+
+export async function getTotalCategoryCount(){
+  return client.fetch(
+    `*[_type == "category"] {
+      title,
+      slug,
+      "totalPosts": count(*[_type == "post" && references(^._id)])
+    }`
+  )
+}

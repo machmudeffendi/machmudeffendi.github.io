@@ -23,3 +23,9 @@ export type CategoryType = {
   slug: { current: string },
   description: string
 }
+
+export type CategoryTotalPostType = {
+  title: string,
+  slug: { current: string },
+  totalPosts: number
+}

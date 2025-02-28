@@ -1,5 +1,5 @@
 import { getPaginatedPosts, getTotalPostCount } from "@/lib/sanity/queriesBlog"
-import { POST_PER_PAGE } from "@/utility/constant"
+import { POST_PER_PAGE, REVALIDATE_TIME } from "@/utility/constant"
 import { CategoryType, PostType } from "../../blogType"
 import Link from "next/link"
 import Box from "@/components/about-me/Box"
@@ -43,7 +43,7 @@ export default async function Pages({
               <Link href={`/blog/page/${page - 1}`} role="button" className="border-y border-l border-[#2C334B] aspect-square w-[48px] p-[8px]"><ChevronLeft/></Link>
             )}
             {page < totalPages && (
-              <Link href={`/blog/page/${page - 1}`} role="button" className="border border-[#2C334B] aspect-square w-[48px] p-[8px]"><ChevronRight/></Link>
+              <Link href={`/blog/page/${page + 1}`} role="button" className="border border-[#2C334B] aspect-square w-[48px] p-[8px]"><ChevronRight/></Link>
             )}
           </div>
         </div>
@@ -61,4 +61,4 @@ export default async function Pages({
   )
 }
 
-export const revalidate = 60
+export const revalidate = REVALIDATE_TIME
