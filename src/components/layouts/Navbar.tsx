@@ -4,11 +4,25 @@ import { NAV_ITEM } from "@/utility/constant";
 import { Bars3Icon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Navbar(){
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+
 
   const activeLink = (pathname: string, href: string) => {
     if(pathname == href)
@@ -63,7 +77,9 @@ export default function Navbar(){
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="flex flex-col md:hidden border-t border-[#2C334B] bg-[--background]">
+        <div
+          ref={menuRef}
+          className="flex flex-col md:hidden border-t border-[#2C334B] bg-[--background]">
           {NAV_ITEM.map((item) => (
             <Link
               key={item.href}
@@ -72,10 +88,22 @@ export default function Navbar(){
               className={`${
                 activeLink(pathname, item.href)
               }`}
+              onClick={() => setIsOpen(false)} 
             >
               {item.label}
             </Link>
           ))}
+          <Link 
+            href={'/contact-me'} 
+            role="button" 
+            className={`flex px-4 h-[55px] items-center ${
+              pathname == '/contact-me' 
+                ? "border-4 border-[#9290C3] text-white" 
+                : "border-l border-[#2C334B] hover:border-4 hover:border-[#9290C3] hover:text-white"
+            }`}
+            onClick={() => setIsOpen(false)} >
+            _contact-me
+          </Link>
         </div>
       )}
     </nav>
