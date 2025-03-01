@@ -46,7 +46,7 @@ export default function BoxExperience({ item }: BoxExperienceType) {
 
   return (
     <div className="border border-[#2C334B] p-[20px]">
-      <div className="flex flex-row gap-[10px]">
+      <div className="flex flex-col md:flex-row items-center md:justify-left gap-[10px]">
         <Image
           className="dark:invert"
           src={item.image}
@@ -56,7 +56,7 @@ export default function BoxExperience({ item }: BoxExperienceType) {
           priority
         />
         <div className="flex flex-col p-[10px] gap-[10px] w-full leading-none">
-          <div className="flex flex-row justify-between">
+          <div className="flex flex-col md:flex-row justify-between">
             <span className="text-[20px] font-bold text-white">{item.title}</span>
             <span className="text-[20px]">{item.date}</span>
           </div>
