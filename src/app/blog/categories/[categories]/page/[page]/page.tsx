@@ -40,11 +40,11 @@ export default async function Categories({
   
   return (
     <div className="flex flex-col">
-      <h1 className="py-[50px] leading-none text-[40px] font-bold text-white">
+      <h1 className="py-[50px] leading-none text-3xl sm:text-4xl md:text-5xl font-bold text-white">
         {itemCategory.title}
       </h1>
-      <div className="grid grid-cols-3 grid-flow-col gap-[20px] leading-none">
-        <div className="flex flex-col col-span-2">
+      <div className="grid grid-cols-1 md:grid-cols-3 md:gap-[20px] leading-none">
+        <div className="flex flex-col md:col-span-2">
           <div className="border-t border-[#2C334B]">
             {posts.map((item: PostType) => <BoxItemBlog key={item.slug.current} item={item}/>)}
           </div>
