@@ -33,8 +33,8 @@ export function BoxItemBlog({item}: BoxFirstType){
 export default function BoxFirst({item}: BoxFirstType){
   return (
     <div className="flex flex-col border border-[#2C334B] p-[20px]">
-      <span className="text-[20px] mb-[5px]">{formatDate(item.publishedAt)}</span>
-      <Link href={`/blog/${item.slug.current}`} className="text-white text-[36px] font-bold">{item.title}</Link>
+      <span className="text-base sm:text-lg mb-1">{formatDate(item.publishedAt)}</span>
+      <Link href={`/blog/${item.slug.current}`} className="text-white text-xl sm:text-2xl md:text-3xl font-bold">{item.title}</Link>
       <Link href={`/blog/${item.slug.current}`} className="w-full aspect-[16/9] relative border border-[#2C334B] my-[15px]">
         <Image
           src={builderImage(item.image).url()}
@@ -44,7 +44,7 @@ export default function BoxFirst({item}: BoxFirstType){
           objectFit="cover"
         />
       </Link>
-      <p>{item.excerpt}</p>
+      <p className="text-sm sm:text-base">{item.excerpt}</p>
     </div>
   )
 }

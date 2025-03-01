@@ -28,13 +28,13 @@ export default async function Blog({
   const category = await getAllCategories()
 
   return (
-    <div className="flex flex-col">
-      <h1 className="py-[50px] leading-none text-[40px] font-bold text-white">
+    <div className="flex flex-col lg:px-12">
+      <h1 className="py-[50px] leading-none text-3xl sm:text-4xl md:text-5xl font-bold text-white">
         Codeside:<br/>
         The Fenx Blog
       </h1>
-      <div className="grid grid-cols-3 grid-flow-col gap-[20px] leading-none">
-        <div className="flex flex-col col-span-2">
+      <div className="grid grid-cols-1 md:grid-cols-3 md:gap-[20px] leading-none">
+        <div className="flex flex-col md:col-span-2">
           <BoxFirst item={posts[0]}/>
           {posts.filter((f: PostType, idx: number) => idx != 0).map((item: PostType) => <BoxItemBlog key={item.slug.current} item={item}/>)}
           <div className="flex flex-row justify-center my-[20px]">
