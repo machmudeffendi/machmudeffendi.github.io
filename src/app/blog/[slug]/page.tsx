@@ -23,12 +23,12 @@ export default async function Page({
   const post: FullPostType = await getPost(slug)
 
   return (
-    <div className="flex flex-col p-[20px]">
-      <div className="grid grid-cols-12 gap-[40px]">
-        <div className="col-span-2 mx-auto">
+    <div className="flex flex-col lg:px-12">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-[40px]">
+        <div className="md:col-span-2 md:mx-auto">
           <BackButton />
         </div>
-        <div className="col-span-6 aspect-[4/3] relative" >
+        <div className="md:col-span-6 aspect-[4/3] relative order-last md:order-none" >
           <Image
             src={builderImage(post.image).url()}
             alt="Image Picsum"
@@ -36,21 +36,21 @@ export default async function Page({
             objectFit="cover"
           />
         </div>
-        <div className="col-span-4 flex flex-col justify-center leading-none">
-          <h1 className="text-white text-[32px] font-bold mb-[10px]">{post.title}</h1>
-          <span className="text-white mb-[5px]">By {post.author.name}</span>
-          <span className="mb-[10px]">{formatDate(post.publishedAt)}</span>
+        <div className="md:col-span-4 flex flex-col justify-center leading-none">
+          <h1 className="text-white text-2xl sm:text-3xl font-bold mb-[10px]">{post.title}</h1>
+          <span className="text-white sm:text-lg mb-1">By {post.author.name}</span>
+          <span className="sm:text-lg mb-2">{formatDate(post.publishedAt)}</span>
           <div className="flex flex-row gap-[10px] leading-none">
             <TagLink list={post.categories} url="/blog/categories"/>
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-12 gap-[40px] mt-10">
-        <div className="col-span-2"></div>
-        <article className="col-span-6 blog-content prose md:prose-md xl:prose-xl">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-[40px] mt-10">
+        <div className="hidden md:block md:col-span-2"></div>
+        <article className="md:col-span-6 blog-content prose md:prose-md xl:prose-xl">
           <PortableText value={post.body} />
         </article>
-        <div className="col-span-4"></div>
+        <div className="hidden md:block md:col-span-4"></div>
       </div>
     </div>
   )
